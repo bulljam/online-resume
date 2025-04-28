@@ -1,20 +1,32 @@
 {
     "basics": {
         "name": "John Doe",
-        "label": "Software Engineer",
+        "label": "Senior Software Engineer",
         "image": "https://example.com/photo.jpg",
         "email": "john@example.com",
         "phone": "(912) 555-4321",
         "url": "https://johndoe.com",
-        "summary": "A summary of John Doe…",
+        "summary": "Senior Software Engineer with 10+ years of experience building scalable backend systems, developer tooling, and modern web platforms. Strong focus on architecture, performance, and clean code.",
+        "yearsOfExperience": 10,
         "location": {
             "address": "2712 Broadway St",
             "postalCode": "CA 94115",
             "city": "San Francisco",
             "countryCode": "US",
-            "region": "California"
+            "region": "California",
+            "timezone": "PST"
         },
         "profiles": [
+            {
+                "network": "GitHub",
+                "username": "johndoe",
+                "url": "https://github.com/johndoe"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "john-doe",
+                "url": "https://linkedin.com/in/john-doe"
+            },
             {
                 "network": "Twitter",
                 "username": "john",
@@ -24,29 +36,219 @@
     },
     "work": [
         {
-            "name": "Company",
-            "position": "President",
-            "url": "https://company.com",
-            "startDate": "2013-01-01",
-            "endDate": "2014-01-01",
-            "summary": "Description…",
+            "name": "Tech Corp",
+            "position": "Senior Software Engineer",
+            "url": "https://techcorp.com",
+            "location": "San Francisco, CA",
+            "employmentType": "Full-time",
+            "startDate": "2018-04-01",
+            "endDate": null,
+            "summary": "Led backend development for high-traffic SaaS platform serving 2M+ users.",
             "highlights": [
-                "Started the company"
+                "Designed service container and DTO-based architecture",
+                "Improved API performance by 40%",
+                "Mentored 5 junior engineers"
+            ],
+            "technologies": [
+                "PHP",
+                "Laravel",
+                "PostgreSQL",
+                "Redis",
+                "Docker"
+            ]
+        },
+        {
+            "name": "Startup Inc",
+            "position": "Software Engineer",
+            "url": "https://startup.com",
+            "location": "Remote",
+            "employmentType": "Contract",
+            "startDate": "2014-01-01",
+            "endDate": "2018-03-01",
+            "summary": "Built MVP and scaled platform from 0 to 100k users.",
+            "highlights": [
+                "Built REST APIs from scratch",
+                "Introduced CI/CD pipelines"
+            ],
+            "technologies": [
+                "PHP",
+                "Symfony",
+                "MySQL",
+                "AWS"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "SaaS Billing Engine",
+            "description": "Subscription billing and invoicing engine supporting multi-tenant SaaS products.",
+            "url": "https://github.com/john/saas-billing",
+            "startDate": "2024-02-01",
+            "endDate": "2025-06-01",
+            "status": "Completed",
+            "role": "Lead Backend Engineer",
+            "highlights": [
+                "Implemented Stripe-based subscription lifecycle",
+                "Handled proration, trials, and webhooks",
+                "Designed domain-driven billing models",
+                "Reduced billing-related bugs by 60%"
+            ],
+            "technologies": [
+                "Laravel",
+                "Stripe API",
+                "MySQL",
+                "Redis",
+                "Docker"
+            ]
+        },
+        {
+            "name": "Internal Developer Platform",
+            "description": "Platform to standardize service creation, deployment, and observability across teams.",
+            "url": null,
+            "startDate": "2023-01-01",
+            "endDate": "2024-01-01",
+            "status": "Completed",
+            "role": "Senior Engineer",
+            "highlights": [
+                "Introduced service container standards",
+                "Built reusable DTO & validation layer",
+                "Integrated logging and metrics dashboards",
+                "Improved onboarding time for new engineers"
+            ],
+            "technologies": [
+                "PHP",
+                "Laravel",
+                "Docker",
+                "Prometheus",
+                "Grafana"
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "name": "Backend Engineering",
+            "level": "Expert",
+            "keywords": [
+                "PHP",
+                "Laravel",
+                "Symfony",
+                "MySQL",
+                "PostgreSQL"
+            ]
+        },
+        {
+            "name": "Architecture",
+            "level": "Advanced",
+            "keywords": [
+                "Service Containers",
+                "DTOs",
+                "Domain-Driven Design",
+                "Clean Architecture"
+            ]
+        },
+        {
+            "name": "DevOps",
+            "level": "Intermediate",
+            "keywords": [
+                "Docker",
+                "CI/CD",
+                "GitHub Actions",
+                "AWS"
             ]
         }
     ],
     "education": [
         {
-            "institution": "University",
-            "url": "https://institution.com/",
+            "institution": "University of California",
+            "url": "https://institution.com",
             "area": "Software Development",
-            "studyType": "Bachelor",
+            "studyType": "Bachelor of Science",
             "startDate": "2011-01-01",
             "endDate": "2013-01-01",
             "score": "4.0",
             "courses": [
-                "DB1101 - Basic SQL"
+                "Algorithms",
+                "Data Structures",
+                "Operating Systems",
+                "Database Systems"
             ]
+        }
+    ],
+    "certifications": [
+        {
+            "name": "AWS Certified Developer – Associate",
+            "issuer": "Amazon",
+            "date": "2022-06-01",
+            "url": "https://aws.amazon.com/certification"
+        }
+    ],
+    "languages": [
+        {
+            "language": "English",
+            "fluency": "Native"
+        },
+        {
+            "language": "Spanish",
+            "fluency": "Professional Working Proficiency"
+        }
+    ],
+    "awards": [
+        {
+            "title": "Employee of the Year",
+            "awarder": "Tech Corp",
+            "date": "2021-12-01",
+            "summary": "Recognized for technical leadership and impact."
+        }
+    ],
+    "publications": [
+        {
+            "name": "Scaling Laravel Applications",
+            "publisher": "Medium",
+            "releaseDate": "2022-03-01",
+            "url": "https://medium.com/@john/scaling-laravel"
+        }
+    ],
+    "talks": [
+        {
+            "title": "Clean Architecture in PHP",
+            "event": "PHP Conference",
+            "date": "2023-09-01",
+            "location": "Berlin, Germany",
+            "url": "https://conference.com/talks/clean-architecture"
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "Open Source Initiative",
+            "position": "Contributor",
+            "url": "https://opensource.org",
+            "startDate": "2020-01-01",
+            "endDate": null,
+            "summary": "Maintainer and contributor to open-source PHP libraries."
+        }
+    ],
+    "interests": [
+        {
+            "name": "Open Source",
+            "keywords": [
+                "Laravel",
+                "PHP",
+                "DX"
+            ]
+        },
+        {
+            "name": "System Design",
+            "keywords": [
+                "Scalability",
+                "Performance"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Jane Smith",
+            "relationship": "Engineering Manager",
+            "contact": "jane.smith@techcorp.com"
         }
     ]
 }
