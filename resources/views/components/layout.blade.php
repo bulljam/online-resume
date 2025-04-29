@@ -53,6 +53,11 @@
                 border-bottom: 1px solid #999 !important;
                 color: #333 !important;
             }
+            @page {
+                size: A4;
+                margin: 18mm;
+            }
+
         }
     </style>
 </head>
@@ -62,4 +67,5 @@
         {{ $slot }}
     </main>
 </body>
+
 </html>
