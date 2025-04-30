@@ -2,35 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use App\DataObjects\Resume;
+use App\Services\ResumeService;
 use Barryvdh\DomPDF\Facade\Pdf;
-use Illuminate\Support\Facades\Cache;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
+use Symfony\Component\HttpFoundation\Response;
+
 
 class ResumeController extends Controller
 {
-    public function index()
-    {
-        $resume = Cache::remember('resume_object', now()->addDay(), function () {
-            $resumeData = json_decode(
-                Storage::disk('resumes')->get('resume.json'),
-                true
-            );
-            return Resume::fromArray($resumeData);
-        });
-
-        return view('resume', compact('resume'));
+    public function __construct(
+        private readonly ResumeService $resumeService
+    ) {
     }
 
-    public function download()
+    public function index(): View
     {
-        $resume = Cache::remember('resume_object', now()->addDay(), function () {
-            $resumeData = json_decode(
-                Storage::disk('resumes')->get('resume.json'),
-                true
-            );
-            return Resume::fromArray($resumeData);
-        });
+        return view('resume', [
+            'resume' => $this->resumeService->getResume(),
+        ]);
+    }
+
+    public function download(): Response
+    {
+        $resume = $this->resumeService->getResume();
 
         $pdf = Pdf::loadView('resume', compact('resume'));
         return $pdf->download("{$resume->basics->name}-resume.pdf");
