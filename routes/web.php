@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [ResumeController::class, 'index']);
 Route::post('/download', [ResumeController::class, 'download'])->name('resume.download');
+
